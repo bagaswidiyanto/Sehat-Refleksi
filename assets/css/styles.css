@@ -1,0 +1,1022 @@
+/* Description: Master CSS file */
+
+/*****************************************
+Table Of Contents:
+- General Styles
+- Navigation
+- Header
+- Features
+- Details 1
+- Details Modal
+- Details 2
+- Testimonials
+- Invitation
+- Pricing
+- Questions
+- Footer
+- Copyright
+- Back To Top Button
+- Extra Pages
+- Media Queries
+******************************************/
+
+/*****************************************
+Colors:
+- Backgrounds - light gray #f9f8f8
+- Buttons - navy blue #272556
+- Buttons - orange #f25c05
+- Headings text - navy blue #272556
+- Body text - dark gray #565578
+******************************************/
+
+
+/**************************/
+/*     General Styles     */
+/**************************/
+body,
+html {
+	color: #fff;
+    width: 100%;
+	height: 100%;
+}
+
+body, p {
+	font-family: 'Nunito'
+}
+
+body .img-hero {
+	position: absolute;
+	z-index: 0;
+	height: 100%;
+	bottom: 0;
+	top: 0;
+	right: 0;
+}
+
+
+
+a {
+	color: #565578;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #565578;
+	text-decoration: none;
+}
+
+.btn-green-dark a {
+	background: #006339;
+	border-radius: 10px;
+	color: #fff;
+	padding: 5px 20px;
+}
+
+.btn-green-dark a:hover {
+	background: none;
+	border: 1px solid #fff;
+	color: #fff;
+}
+
+
+.btn-green-light a {
+	background: #00AF65;
+	border-radius: 10px;
+	color: #fff;
+	padding: 5px 20px;
+}
+
+.btn-green-light a:hover {
+	background: none;
+	border: 1px solid #008454;
+	color: #008454;
+}
+
+.text-green {
+	color: #008454;
+}
+
+/* Fade Animation For Rotating Text - ReplaceMe  */
+@-webkit-keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.fadeIn {
+	-webkit-animation: fadeIn 0.6s;
+	animation: fadeIn 0.6s;
+}
+
+@-webkit-keyframes fadeOut {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+@keyframes fadeOut {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+/* end of fade animation for rotating text - replaceme */
+
+
+/**********************/
+/*     Navigation     */
+/**********************/
+.navbar {
+	background-color: #e3e3e3d4;
+	font-weight: 600;
+	font-size: 0.875rem;
+	line-height: 0.875rem;
+}
+
+.navbar .navbar-brand {
+	padding-top: 0.25rem;
+	padding-bottom: 0.25rem;
+}
+
+.navbar .logo-image img {
+    width: 80px;
+	height: 80px;
+}
+
+.navbar .logo-text {
+	color: #272556;
+	font-weight: 600;
+	font-size: 1.875rem;
+	line-height: 1rem;
+	text-decoration: none;
+}
+
+.offcanvas-collapse {
+	position: fixed;
+	top: 4rem; /* adjusts the height between the top of the page and the offcanvas menu */
+	/* bottom: 0; */
+	left: 30%;
+	width: 30%;
+	padding-right: 1rem;
+	padding-left: 1rem;
+	overflow-y: auto;
+	visibility: hidden;
+	background-color: #c7c7c7;
+	transition: visibility .3s ease-in-out, -webkit-transform .3s ease-in-out;
+	transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+	transition: transform .3s ease-in-out, visibility .3s ease-in-out, -webkit-transform .3s ease-in-out;
+}
+
+.offcanvas-collapse.open {
+	visibility: visible;
+	-webkit-transform: translateX(-100%);
+	transform: translateX(-100%);
+}
+
+.navbar .navbar-nav {
+	margin-top: 0.75rem;
+	margin-bottom: 0.5rem;
+}
+
+.navbar .nav-item .nav-link {
+	padding-top: 0.625rem;
+	padding-bottom: 0.625rem;
+	color: #fff;
+	text-decoration: none;
+	transition: all 0.2s ease;
+}
+
+.navbar .nav-item.dropdown.show .nav-link,
+.navbar .nav-item .nav-link:hover,
+.navbar .nav-item .nav-link.active {
+	color: #008454;
+}
+
+/* Dropdown Menu */
+.navbar .dropdown .dropdown-menu {
+	animation: fadeDropdown 0.2s; /* required for the fade animation */
+}
+
+@keyframes fadeDropdown {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+	}
+}
+
+.navbar .dropdown-menu {
+	margin-top: 0.25rem;
+	margin-bottom: 0.25rem;
+	border: none;
+	background-color: #fff2dc;
+}
+
+.navbar .dropdown-item {
+	padding-top: 0.625rem;
+	padding-bottom: 0.625rem;
+	color: #272556;
+	font-weight: 600;
+	font-size: 0.875rem;
+	line-height: 0.875rem;
+	text-decoration: none;
+}
+
+.navbar .dropdown-item:hover {
+	background-color: #fff2dc;
+	color: #f25c05;
+}
+
+.navbar .dropdown-divider {
+	width: 100%;
+	height: 1px;
+	margin: 0.5rem auto 0.5rem auto;
+	border: none;
+	background-color: #d1d1d1;
+}
+/* end of dropdown menu */
+
+.navbar .navbar-toggler {
+	padding: 0;
+	border: none;
+	font-size: 1.25rem;
+}
+
+.bg-green-gradasi {
+	background: radial-gradient(100% 100% at 50% 0%, #00E18F 1.94%, #008454 100%);
+}
+
+
+/******************/
+/*     Header     */
+/******************/
+.header {
+	/* padding-top: 8rem; */
+	/* padding-bottom: 9rem; */
+	height: 100vh;
+	/* background-color: #fff2dc; */
+	text-align: center;
+}
+
+.header .h1-large {
+	margin-bottom: 1.25rem;
+	font-family: 'Fjalla One';
+}
+
+
+/* .header .p-large {
+	margin-bottom: 2.75rem;
+}
+
+.header .btn-solid-lg {
+	display: block;
+	margin-bottom: 1.75rem;
+}
+
+.header .text-container {
+	margin-bottom: 5rem;
+} */
+
+
+/********************/
+/*     Features     */
+/********************/
+.sehat-refleksi {
+	position: relative;
+}
+
+.sehat-refleksi .refleksi-container {
+	padding-top: 240px;
+	padding-bottom: 240px;
+}
+
+.sehat-refleksi .img-refleksi {
+	position: absolute;
+	height: 100%;
+	z-index: 0	;
+	top: 0;
+	bottom: 0;
+}
+
+.sehat-refleksi .h2-heading {
+	font-family: 'Fjalla One';
+}
+
+@media only screen and (max-width: 767px) {
+	.sehat-refleksi .refleksi-container {
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+} 
+
+@media only screen and (max-width: 600px)  {
+	body .img-hero {
+		opacity: 0.5;
+		height: auto;
+	}
+
+	.sehat-refleksi .img-refleksi {
+		opacity: 0.5;
+	}
+
+	
+}
+
+/*********************/
+/*     Details 1     */
+/*********************/
+.detail-1 {
+	position: relative;
+	background: #00835326;
+}
+
+.detail-1 .dr {
+	position: absolute;
+	right: 0;
+	top: -80px;
+}
+
+.detail-1 .dl {
+	position: absolute;
+	left: 0;
+	bottom: -75px;
+	z-index: 1;
+}
+
+.detail-1 .detail-container {
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+
+.detail-1 .row {
+	position: relative;
+	z-index: 1;
+}
+
+
+.detail-1 .detail-cards .detail-img img {
+	width: auto;
+	height: auto;
+}
+
+.detail-1 .detail-cards:hover .detail-img img{
+	transition: 0.3s;
+}
+
+.detail-1 .detail-cards:hover .detail-img img {
+	transform: scale(1.1);
+}
+
+.detail-1 .heading h2 {
+	font-size: 50px;
+	font-weight: 400;
+	color: #008454;
+	text-align: center;
+	font-family: 'Fjalla One';
+}
+
+.detail-1 .detail-cards .detail-text p {
+	color: #008454;
+	font-size: 18px;
+	font-family: 'Nunito';
+}
+
+@media only screen and (max-width: 767px)  {
+	.detail-1 .dr {
+		display: none;
+	}
+	
+	.detail-1 .dl {
+		display: none;
+	}
+
+}
+
+
+/*********************/
+/*     Details 2     */
+/*********************/
+.detail-2 {
+	position: relative;
+	background: radial-gradient(100% 100% at 50% 0%, #01CD83 1.94%, #008454 100%);
+}
+
+.detail-2 .bg-detail {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	height: 100%;
+}
+
+.detail-2 .detail-container {
+	padding-top: 80px;
+	padding-bottom: 120px;
+}
+
+.detail-2 .row {
+	position: relative;
+}
+
+.detail-2 .heading h2 {
+	font-size: 56px;
+	font-weight: 400;
+	text-transform: uppercase;
+	font-family: 'Fjalla One';
+}
+
+.detail-2 .heading h4 {
+	font-size: 34px;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+.detail-2 .heading h1 {
+	font-size: 80px;
+	font-weight: 400;
+	text-transform: uppercase;
+	font-family: 'Fjalla One';
+}
+
+@media only screen and (max-width: 600px)  {
+	.detail-2 .bg-detail {
+		opacity: 0.7;
+	}
+}
+
+
+/*********************/
+/*     Details 3     */
+/*********************/
+
+.detail-3 {
+	position: relative;
+}
+
+.detail-3 .row {
+	position: relative;
+	z-index: 1;
+} 
+
+.detail-3 .dl {
+	position: absolute;
+	left: 0;
+	top: -75px;
+}
+
+.detail-3 .dr {
+	position: absolute;
+	right: 0;
+	bottom: -75px;
+		z-index: 1;
+}
+
+@media only screen and (max-width: 767px)  {
+	.detail-3 .dl {
+		display: none;
+	}
+	
+	.detail-3 .dr {
+		display: none;
+	}
+}
+
+
+
+/*********************/
+/*     Details 4     */
+/*********************/
+
+.detail-4 {
+	position: relative;
+	background: radial-gradient(100% 100% at 50% 0%, #01CD83 1.94%, #008454 100%);
+}
+
+.detail-4 .detail-card .detail-text p {
+	color: #fff;
+}
+.detail-4 .detail-card .detail-text h2 {
+	color: #fff;
+}
+
+/*********************/
+/*     Details 5     */
+/*********************/
+.detail-5 {
+	position: relative;
+}
+
+.detail-5 .row {
+	position: relative;
+	z-index: 1;
+}
+
+.detail-5 .dl {
+	position: absolute;
+	left: 0;
+	top: -75px;
+}
+
+.detail-5 .dr {
+	position: absolute;
+	right: 0;
+	bottom: -75px;
+	z-index: 1;
+}
+
+@media only screen and (max-width: 767px)  {
+	.detail-5 .dl {
+		display: none;
+	}
+	
+	.detail-5 .dr {
+		display: none;
+	}
+}
+
+
+
+.detail-all-container {
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+
+.heading-text h2 {
+	font-size: 48px;
+	text-align: center;
+	font-weight: 400;
+	font-family: 'Fjalla One';
+
+}
+
+
+.detail-card {
+	padding: 20px;
+}
+
+
+.detail-card .detail-img {
+	max-height: 30vh;
+}
+
+.detail-card .detail-img img {
+	transition: 0.3s;
+}
+
+.detail-card:hover .detail-img img {
+	transform: scale(1.1);
+	border-radius: 20px;
+	width: 100%;
+}
+
+.detail-card .detail-text p {
+	font-size: 20px;
+	font-weight: 400;
+	margin-bottom: 0;
+	text-transform: uppercase;
+	font-family: 'Fjalla One';
+}
+
+.detail-card .detail-text h2 {
+	font-size: 56px;
+	font-weight: 400;
+	text-transform: uppercase;
+	font-family: 'Fjalla One';
+}
+
+.detail-card:hover .detail-text .btn-green-dark a {
+	background: none;
+	border: 1px solid #fff;
+	color: #fff;
+}
+
+.detail-card:hover .detail-text .btn-green-light a {
+	background: none;
+	border: 1px solid #008454;
+	color: #008454;
+}
+
+
+@media only screen and (max-width: 767px)  {
+	.heading-text h2 {
+		font-size: 40px;
+	
+	}
+
+
+	.detail-card {
+		padding: 0;
+	}
+
+	.detail-card .detail-img img {
+		height: 100px;
+	}
+
+	.detail-card .detail-text p {
+		font-size: 14px;
+	}
+
+	.detail-card .detail-text h2 {
+		font-size: 36px;
+	}
+
+	.btn-green-light a {
+		padding: 5px 12px;
+		font-size: 9px;
+	}
+	.btn-green-dark a {
+		padding: 5px 12px;
+		font-size: 9px;
+	}
+}
+@media only screen and (max-width: 600px)  {
+	.detail-card .detail-text p {
+		font-size: 10px;
+	}
+
+	.detail-card .detail-text h2 {
+		font-size: 30px;
+	}
+}
+
+/************************/
+/*     Testimonials     */
+/************************/
+.testimonial {
+	position: relative;
+	background: #0C6F4B;
+}
+
+.testimonial .testi-container {
+	padding-top: 70px;
+	padding-bottom: 70px;
+}
+
+.testimonial .heading h2 {
+	font-size: 50px;
+	font-weight: 400;
+	font-family: 'Fjalla One';
+}
+
+.testimonial .card-slide img {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+}
+
+.testimonial .card-slide .card-body h3 {
+	font-size: 30px;
+	font-weight: 400;
+	/* border-bottom: 1px solid #fff; */
+	text-decoration: underline;
+	font-family: 'Fjalla One';
+}
+
+.testimonial .slider-container {
+	position: relative;
+}
+
+.testimonial .swiper-container {
+	position: static;
+}
+
+
+
+.testimonial .swiper-button-prev {
+	left: -405px;
+	background-image: url("../imagenew/left-arrow.png");
+	background-size: 14px;
+	background-color: #fff;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+
+.testimonial .swiper-button-next {
+	right: -70px;
+	background-image: url("../imagenew/right-arrow.png");
+	background-size: 14px;
+	background-color: #fff;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+	.testimonial .swiper-button-prev {
+		left: -355px;
+	
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	.testimonial .swiper-button-prev {
+		left: -281px;
+	
+	}
+}
+
+@media only screen and (min-width: 600px) and (max-width: 767px)  {
+	.testimonial .swiper-button-prev {
+		left: -78px;
+	
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.testimonial .swiper-button-next {
+		display: none;
+	}
+}
+
+/******************/
+/*     Gallery     */
+/******************/
+
+.gallery {
+	position: relative;
+	background: #00835326;
+	padding: 70px 0;
+}
+
+.gallery .heading h2 {
+	font-size: 48px;
+	text-align: center;
+	font-weight: 400;
+	font-family: 'Fjalla One';
+}
+
+.gallery .gallery-img img {
+	border-radius: 20px;
+	width: 100%;
+}
+
+.gallery .gallery-img {
+	transition: 0.3s;
+	max-height: 34vh;
+}
+
+.gallery .gallery-img:hover {
+	transform: scale(1.1);
+}
+
+
+/******************/
+/*     Footer     */
+/******************/
+.footer {
+	position: relative;
+	padding: 60px 0;
+}
+
+
+
+.footer .footer-address h2 {
+	font-size: 36px;
+	text-transform: uppercase;
+	font-weight: 400;
+	margin-bottom: 0;
+	font-family: 'Fjalla One';
+}
+
+.footer .footer-address h4  {
+	text-transform: uppercase;
+	margin-bottom: 0;
+	margin-top: 14px;
+	font-weight: 800;
+}
+
+.footer .footer-address p {
+	margin-bottom: 0;
+}
+
+.footer .footer-address .btn-green-light a {
+	font-size: 14px;
+	padding: 8px 20px 8px 42px;
+	position: relative;
+	
+}
+
+.footer .footer-address .btn-green-light a i {
+	font-size: 28px;
+	position: absolute;
+	left: 0;
+	margin-left: 15px;
+}
+
+
+@media only screen and (max-width: 600px)  {
+	.footer .footer-address .btn-green-light a {
+		padding: 8px 15px 8px 35px;
+		
+	}
+
+	.footer .footer-address .btn-green-light a i {
+		margin-left: 5px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.footer .footer-address .btn-green-light a i {
+		font-size: 24px;
+	}
+}
+
+
+/*********************/
+/*     Copyright     */
+/*********************/
+.copyright {
+	padding: 10px 0;
+	background-color: #343536;
+}
+
+.copyright p {
+	font-size: 10px;
+	color: #D9D9D9;
+	margin-bottom: 0;
+}
+
+.copyright a {
+	color: #D9D9D9;
+}
+
+.copyright a:hover {
+	color: #008454;
+}
+
+/******************************/
+/*     Back To Top Button     */
+/******************************/
+#myBtn {
+	position: fixed;
+	z-index: 99;
+	bottom: 75px;
+	right: 15px;
+	display: none;
+	width: 52px;
+	height: 52px;
+	border: none;
+	border-radius: 10px;
+	outline: none;
+	background: #034F07;
+	cursor: pointer;
+}
+
+#myBtn:hover {
+	background-color: #1d1d21;
+}
+
+#myBtn img {
+	margin-bottom: 0.25rem;
+	width: 18px;
+}
+
+/*************************/
+/*     Media Queries     */
+/*************************/	
+/* Min-width 768px */
+@media (min-width: 768px) {
+
+	/* Header */
+	.header {
+		/* padding-top: 9rem; */
+	}
+
+	.header .h1-large {
+		font-size: 3.75rem;
+		line-height: 4.625rem;
+	}
+	/* end of header */
+}
+/* end of min-width 768px */
+
+
+/* Min-width 992px */
+@media (min-width: 992px) {
+	
+
+	/* Navigation */
+	.navbar {
+		padding-top: 1.75rem;
+		background-color: transparent;
+		box-shadow: none;
+		transition: all 0.2s;
+	}
+
+	.navbar.extra-page {
+		padding-top: 0.5rem;
+	}
+
+	.navbar.top-nav-collapse {
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+		background-color: #e3e3e3d4;
+	}
+
+	.offcanvas-collapse {
+		position: static;
+		top: auto;
+		bottom: auto;
+		left: auto;
+		width: auto;
+		padding-right: 0;
+		padding-left: 0;
+		background-color: transparent;
+		overflow-y: visible;
+		visibility: visible;
+	}
+
+	.offcanvas-collapse.open {
+		-webkit-transform: none;
+		transform: none;
+	}
+
+	.navbar .navbar-nav {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	
+	.navbar .nav-item .nav-link {
+		padding-right: 0.75rem;
+		padding-left: 0.75rem;
+	}
+
+	.navbar .dropdown-menu {
+		padding-top: 0.75rem;
+		padding-bottom: 0.75rem;
+		box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.08);
+	}
+
+	.navbar .dropdown-divider {
+		width: 90%;
+	}
+
+	.navbar .nav-item .btn-outline-sm {
+		margin-top: 0;
+		margin-left: 0.625rem;
+	}
+	/* end of navigation */
+
+
+	/* Header */
+	.header {
+		/* padding-top: 12rem; */
+		/* padding-bottom: 12rem; */
+		text-align: left;
+	}
+
+	.header .text-container {
+		margin-bottom: 0;
+	}
+
+	.header .btn-solid-lg {
+		display: inline-block;
+		margin-bottom: 0;
+	}
+	/* end of header */
+
+}
+/* end of min-width 992px */
+
+
+/* Min-width 1200px */
+@media (min-width: 1200px) {
+	
+	/* General Styles */
+	.container {
+		max-width: 1140px;
+	}
+	/* end of general styles */
+	
+
+	/* Header */
+	.header {
+		overflow: hidden;
+		/* padding-top: 18.5rem; */
+		/* padding-bottom: 18rem; */
+	}
+
+	
+
+}
+/* end of min-width 1200px */
